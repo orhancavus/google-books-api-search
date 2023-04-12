@@ -16,11 +16,10 @@ The program prompts the user to enter a search query. It then makes a request to
 
 The program requires the `requests` library to be installed. You can install it using `pip install requests`.
 
-## Contributing
+## Prettify Json with jq
 
-Contributions are welcome! If you would like to contribute to this project, please create a pull request and I will review your changes.
+```bash
+cat books.json | jq
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
+jq '.' books.json
+```
