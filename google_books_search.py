@@ -10,7 +10,6 @@ def search_books(query, maxResults):
     params = {"q": query, "maxResults": maxResults}
     response = requests.get(endpoint, params=params).json()
 
-    #print(response)
     books = []
     for book in response["items"]:
         volume = book["volumeInfo"]

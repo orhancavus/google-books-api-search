@@ -1,25 +1,31 @@
-# Google Books API Search
+# Google Books API Search Script
 
-This program demonstrates how to use the Google Books API to search for books and retrieve information about them. It is written in Python and uses the `requests` library to make HTTP requests to the API.
+```text
+Author : Orhan Chaushev
+Date   : 12.04.2023
+```
 
-## Getting Started
+This Python script allows you to search for books using the Google Books API and retrieve information about them. You can specify a search query and a maximum number of results to return. The information is returned in JSON format and can be saved to a file for later use.
 
-1. Clone this repository to your local machine using `git clone https://github.com/orhancavus/google-books-api-search.git`.
-2. Install the `requests` library by running `pip install requests`.
-3. Run the program by executing `python search.py` in your terminal.
+## Requirements
+
+- Python 3
+- requests library (`pip install requests`)
 
 ## Usage
 
-The program prompts the user to enter a search query. It then makes a request to the Google Books API with the query as a parameter and retrieves information about the top 3 results. The information retrieved includes the book title, published date, and description (if available).
+1. Clone the repository or download the script file (`google_books_search.py`) to your computer.
+2. Open a terminal or command prompt and navigate to the directory where the script is located.
+3. Run the script using the following command:
 
-## Dependencies
+    Replace `<search_query>` with your desired search query (enclosed in quotes if it contains spaces) and `<max_results>` with the maximum number of results you want to return (default is 10 if not specified).
 
-The program requires the `requests` library to be installed. You can install it using `pip install requests`.
+4. The script will print the results to the console and save them to a file named `books.json` in the same directory as the script.
 
-## Prettify Json with jq
+## Prettify json
 
 ```bash
-cat books.json | jq
-
 jq '.' books.json
+
+cat books.json | jq
 ```
